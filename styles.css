@@ -1,0 +1,161 @@
+* {
+    font-family: "Work Sans", sans-serif;
+}
+
+:root {
+    --Light-pink: hwb(276 94% 0%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+footer {
+    
+    bottom: 0;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--Grayish-purple);
+}
+
+.attribution a {
+    color: var(--Dark-purple);
+    font-weight: 700;
+}
+
+body {
+    background: var(--Light-pink);
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    font-size: 16px;
+    margin: 0 auto;
+    font-weight: 400;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    background-color: white;
+    width: 520px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 25px 20px 5px hsl(0deg 0% 0% / 15%);
+    margin-top: 136px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+}
+
+section.elements {
+    margin-top: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    margin-left: 1rem;
+    color: var(--Dark-purple);
+}
+
+.title {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.title img {
+    width: 32px;
+    transition: .2s;
+}
+
+span {
+    font-weight: 700;
+    color: var(--Dark-purple);
+
+}
+
+#item {
+    border-bottom: 1px solid var(--Light-pink);
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+#item:last-child {
+    border-bottom: none;
+}
+
+#item .content {
+    display: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+img.close {
+    display: none;
+}
+
+img.open {
+    display: block;
+}
+
+#item.active .content {
+    display: block;
+}
+
+#item.active img.open {
+    display: none;
+}
+
+#item.active img.close {
+    display: block;
+}
+
+p {
+    color: var(--Grayish-purple);
+    line-height: 1.5;
+    margin: 20px 0px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 640px) {
+    body{
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+        font-size: 15px;
+    }
+    main {
+        max-width: 520px;
+        width: 300px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+    header img{
+        width: 29px;
+        height: 29px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .title img {
+        margin-left: 3rem;
+    }
+}
